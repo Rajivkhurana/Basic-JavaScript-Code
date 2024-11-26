@@ -7,9 +7,6 @@
     <title>Registration Form</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./index.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="./main.js"></script>
-  
 </head>
 
 <body>
@@ -40,9 +37,9 @@
                     <label for="city">City :</label>
                     <select class="form-control" id="city" name="city">
                         <option value="" disabled selected>Select City</option>
-                        <option value="Ahmedabad">Ahmedabad</option>
-                        <option value="Baroda">Baroda</option>
-                        <option value="Goa">Goa</option>
+                        <option>Ahmedabad</option>
+                        <option>Baroda</option>
+                        <option>Goa</option>
                     </select>
                     <div id="cityError" class="error-message"></div>
                 </div>
@@ -50,8 +47,8 @@
                     <label for="state">State :</label>
                     <select class="form-control" id="state" name="state">
                         <option value="" disabled selected>Select State</option>
-                        <option value="Gujarat">Gujarat</option>
-                        <option value="Goa">Goa</option>
+                        <option>Gujarat</option>
+                        <option>Goa</option>
                     </select>
                     <div id="stateError" class="error-message"></div>
                 </div>
@@ -59,7 +56,7 @@
             <div class="form-row">
                 <div class="col-md-6 form-group">
                     <label for="pincode">Pincode :</label>
-                    <input type="number" class="form-control" id="pincode" name="pincode" minlength="1" maxlength="10" required>
+                    <input type="number" class="form-control" id="pincode" name="pincode" maxlength="6">
                     <div id="pincodeError" class="error-message"></div>
                 </div>
                 <div class="col-md-6 form-group">
@@ -93,7 +90,7 @@
             <div class="form-row">
                 <div class="col-md-6 form-group">
                     <label for="mobile">Mobile No. :</label>
-                    <input type="number" class="form-control" id="mobile" name="mobile">
+                    <input type="number" class="form-control" id="mobile" name="mobile" maxlength="10">
                     <div id="mobileError" class="error-message"></div>
                 </div>
                 <div class="col-md-6 form-group">
@@ -104,7 +101,7 @@
             </div>
             <div class="form-row" id="submitForm">
                 <div class="col-md-12 form-group">
-                    <button type="button" class="btn btn-primary" id="btnSubmit">Register</button>
+                    <button type="button" class="btn btn-primary" onclick="submitForm()">Register</button>
                     <span id="saveMessage" name="saveMessage" style="color: rgb(45, 255, 3);"></span>
                 </div>
             </div>
@@ -135,6 +132,7 @@
         </div>
     </div>
 
-    </body>
+    <script src="./main.js"></script>
+</body>
 
 </html>

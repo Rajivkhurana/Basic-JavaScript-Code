@@ -30,23 +30,24 @@ body {
 .user-data {
     margin-top: 20px;
 }
-
+/* font size */
 .user-data table {
     font-size: 12px;
 }
 
-
+/* adds * in front of required field and do not add in selected elements */
 label:not(.radio-inline, .checkbox-inline)::before {
     content: "*";
     color: red;
 }
-
+/* css from button */
 button {
     display: flex;
     flex-direction: column;
     align-items: space-between;
 }
 
+/* remove spinner from number input */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
